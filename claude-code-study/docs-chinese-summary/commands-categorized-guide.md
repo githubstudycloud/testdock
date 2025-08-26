@@ -152,31 +152,40 @@ Claude Code v1.0.92 命令体系
 ## 📈 命令关联图
 
 ```mermaid
-graph TD
-    A[开始使用] --> B[/help]
+flowchart TD
+    A[开始使用] --> B["/help"]
     B --> C{选择任务}
     
-    C -->|新项目| D[/init]
-    D --> E[/add-dir]
-    E --> F[/memory]
+    C -->|新项目| D["/init"]
+    D --> E["/add-dir"]
+    E --> F["/memory"]
     
-    C -->|继续工作| G[/resume]
-    G --> H[/context]
+    C -->|继续工作| G["/resume"]
+    G --> H["/context"]
     H --> I{空间不足?}
-    I -->|是| J[/compact]
+    I -->|是| J["/compact"]
     I -->|否| K[继续开发]
     
-    C -->|代码审查| L[/review]
-    L --> M[/security-review]
-    M --> N[/pr-comments]
+    C -->|代码审查| L["/review"]
+    L --> M["/security-review"]
+    M --> N["/pr-comments"]
     
-    C -->|系统问题| O[/doctor]
-    O --> P[/status]
-    P --> Q[/bug]
+    C -->|系统问题| O["/doctor"]
+    O --> P["/status"]
+    P --> Q["/bug"]
     
-    C -->|配置环境| R[/config]
-    R --> S[/permissions]
-    S --> T[/hooks]
+    C -->|配置环境| R["/config"]
+    R --> S["/permissions"]
+    S --> T["/hooks"]
+    
+    style A fill:#e1f5fe
+    style C fill:#fff3e0
+    style I fill:#fff3e0
+    style D fill:#e8f5e8
+    style G fill:#e8f5e8
+    style L fill:#f3e5f5
+    style O fill:#ffebee
+    style R fill:#f9fbe7
 ```
 
 ---
